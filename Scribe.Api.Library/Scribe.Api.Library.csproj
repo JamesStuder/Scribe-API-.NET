@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{805EB18C-F2E7-40F3-9A47-17BD54DF7B39}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Scribe.Api.Library</RootNamespace>
+    <AssemblyName>Scribe.Api.Library</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\BlockModel.cs" />
+    <Compile Include="Models\DaysModel.cs" />
+    <Compile Include="Models\EmailNotificationModel.cs" />
+    <Compile Include="Models\FormulaModel.cs" />
+    <Compile Include="Models\ImportMapModel.cs" />
+    <Compile Include="Models\ImportMapValueModel.cs" />
+    <Compile Include="Models\InvitedUsersModel.cs" />
+    <Compile Include="Models\LookupTablesModel.cs" />
+    <Compile Include="Models\LookupTableValuesModel.cs" />
+    <Compile Include="Models\MapLinkModel.cs" />
+    <Compile Include="Models\MapsModel.cs" />
+    <Compile Include="Models\OnPremiseInstallModel.cs" />
+    <Compile Include="Models\OrgsModel.cs" />
+    <Compile Include="Models\RecurringOptionsModel.cs" />
+    <Compile Include="Models\RegisterModel.cs" />
+    <Compile Include="Models\RelnameinformationlookupModel.cs" />
+    <Compile Include="Models\ReplicationSettingsModel.cs" />
+    <Compile Include="Models\RunOnceOptionsModel.cs" />
+    <Compile Include="Models\ScheduleModel.cs" />
+    <Compile Include="Models\SecurityRuleModel.cs" />
+    <Compile Include="Models\SecuritySettingModel.cs" />
+    <Compile Include="Models\SolutionsModel.cs" />
+    <Compile Include="Models\SubscriptionSkuModel.cs" />
+    <Compile Include="Models\TargetCollectionModel.cs" />
+    <Compile Include="Models\TargetConnectionInfoModel.cs" />
+    <Compile Include="Models\TimesModel.cs" />
+    <Compile Include="Models\UnderPostDefaultsModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Models\ValueModel.cs" />
+    <Compile Include="Models\AgentModel.cs" />
+    <Compile Include="Models\ConnectionModel.cs" />
+    <Compile Include="Models\PropertiesModel.cs" />
+    <Compile Include="Models\InstalledConnectorModel.cs" />
+    <Compile Include="ScribeApiLibrary.cs" />
+    <Compile Include="Services\JsonService.cs" />
+    <Compile Include="Services\UrlBuilderService.cs" />
+    <Compile Include="Settings\ExecutionHistoryColumnSortSettings.cs" />
+    <Compile Include="Settings\GeneralSettings.cs" />
+    <Compile Include="Factories\WebResponseFactory.cs" />
+    <Compile Include="Services\WebResponseService.cs" />
+    <Compile Include="Data Access Objects\WebServiceDAO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\MapActionSettings.cs" />
+    <Compile Include="Settings\MapTypeSettings.cs" />
+    <Compile Include="Settings\ParameterContentTypeSettings.cs" />
+    <Compile Include="Settings\ResponseContentTypeSettings.cs" />
+    <Compile Include="Settings\ResultSettings.cs" />
+    <Compile Include="Settings\SolutionStatusFilter.cs" />
+    <Compile Include="Settings\SolutionTypeSettings.cs" />
+    <Compile Include="Settings\SortNameSettings.cs" />
+    <Compile Include="Settings\SortOrderSettings.cs" />
+    <Compile Include="Settings\StatusSettings.cs" />
+    <Compile Include="Settings\UrlAgentsSettings.cs" />
+    <Compile Include="Settings\UrlCommandsSettings.cs" />
+    <Compile Include="Settings\UrlConnectionsSettings.cs" />
+    <Compile Include="Settings\UrlConnectorsSettings.cs" />
+    <Compile Include="Settings\UrlCustomersSettings.cs" />
+    <Compile Include="Settings\UrlErrorsSettings.cs" />
+    <Compile Include="Settings\UrlFailedRecordsSettings.cs" />
+    <Compile Include="Settings\UrlHistorySettings.cs" />
+    <Compile Include="Settings\UrlInvitedUsersSettings.cs" />
+    <Compile Include="Settings\UrlLookupTablesSettings.cs" />
+    <Compile Include="Settings\UrlManagedConnectorsSettings.cs" />
+    <Compile Include="Settings\UrlMapsSettings.cs" />
+    <Compile Include="Settings\UrlMarketplaceSettings.cs" />
+    <Compile Include="Settings\UrlOrganizationsSettings.cs" />
+    <Compile Include="Settings\UrlRegisterSettings.cs" />
+    <Compile Include="Settings\UrlSolutionsSettings.cs" />
+    <Compile Include="Settings\UrlSubscriptionsSettings.cs" />
+    <Compile Include="Settings\UrlUsersSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
